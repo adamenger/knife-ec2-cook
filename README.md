@@ -1,8 +1,13 @@
 EC2 Cook
 ========
 
-This is a simple knife plugin intended to be used with Chef Solo. Current usage assumes that you have an instance tagged with "apps" and "environment". 
+This is a simple knife plugin intended to be used with Chef Solo. Current usage assumes that you have an instance tagged with "app" and "environment". 
 Apps meaning which applications the instance is running and environment is which environment you'd like the node to live in.
+
+For instance, I currently have an instance running in a VPC that's tagged as `{'app' : 'my_app'} and {'environment': 'production'}`
+
+![knife ec2 cook example](http://i.imgur.com/n4bIG4e.png)
+
 
 Installation
 ============
@@ -26,6 +31,19 @@ knife ec2 server list (options)
 
 Usage
 ====
+
+This plugin assumes a few things. One assumption is that you already have a node configuration file for the node you want to cook and that it's placed under ~/.chef/nodes/<your_env>/<your_app>.json. With that in mind, here is an example node file for you to use if you don't have one already.
+
+```
+{
+  "run_list":
+    [
+      "recipe[your-cookbook::default]"
+    ],
+  "environment": "production"
+}
+```
+
 
 ```
 $ knife ec2 cook -e production -a my_app
