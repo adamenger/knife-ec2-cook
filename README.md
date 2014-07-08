@@ -22,3 +22,11 @@ knife ec2 server create (options)
 knife ec2 server delete SERVER [SERVER] (options)
 knife ec2 server list (options)
 ```
+
+
+Usage
+====
+
+```
+$ knife ec2 cook -e production -a my_app
+```
