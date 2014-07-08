@@ -40,7 +40,7 @@ class Chef
 
         ec2 = AWS::EC2.new(:access_key_id => access_key, :secret_access_key => secret_key)
         ec2.instances.tagged_values(config[:app]).tagged_values(config[:env]).each do |i|
-          cmd = "knife solo cook #{ec2_user}@#{i.private_ip_address} ~/.chef/apps/#{config[:env]}/#{config[:app]}.json -E #{config[:env]}"
+          cmd = "knife solo cook #{ec2_user}@#{i.private_ip_address} ~/.chef/nodes/#{config[:env]}/#{config[:app]}.json -E #{config[:env]}"
 	  puts cmd
           Open3.pipeline_r(cmd) {|last_stdout, wait_threads|
             last_stdout.each_line {|line|
