@@ -43,7 +43,7 @@ export AWS_ACCESS_KEY_ID=your-key
 export AWS_SECRET_ACCESS_KEY=your-secret-key
 ```
 
-## Example JSON node file
+### Example JSON node file
 ```
 {
   "run_list":
