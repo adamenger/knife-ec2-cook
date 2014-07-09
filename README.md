@@ -32,7 +32,7 @@ knife ec2 server list (options)
 Usage
 ====
 
-One assumption this plugin makes is that you already have a node configuration file for the node you want to cook and that it's placed under ~/.chef/nodes/<your_env>/<your_app>.json. With that in mind, here is an example node file for you to use if you don't have one already.
+One assumption this plugin makes is that you already have a node configuration file for the node you want to cook and that it's placed under ~/.chef/nodes/your_env/your_app.json. With that in mind, here is an example node file for you to use if you don't have one already.
 
 ### Environment Variables
 
