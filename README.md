@@ -38,9 +38,10 @@ One assumption this plugin makes is that you already have a node configuration f
 
 Export these in your ~/.zshrc or ~/.bashrc
 
+```
 export AWS_ACCESS_KEY_ID=your-key
-export WS_SECRET_ACCESS_KEY=your-secret-key
-
+export AWS_SECRET_ACCESS_KEY=your-secret-key
+```
 
 ## Example JSON node file
 ```
