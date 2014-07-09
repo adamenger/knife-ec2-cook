@@ -1,4 +1,4 @@
-EC2 Cook
+Knife EC2 Cook
 ========
 
 This is a simple knife plugin intended to be used with Chef Solo. Current usage assumes that you have an instance tagged with "app" and "environment". 
